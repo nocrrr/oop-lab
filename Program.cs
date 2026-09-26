@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace LaboratoryWork1
 {
@@ -93,14 +93,14 @@ namespace LaboratoryWork1
             double a = 1000.0;
             double b = 0.0001;
 
-            double numDouble = (a - b) * (a - b) * (a - b) * (a - b) - (a * a * a * a);
-            double denDouble = 6 * a * a * b * b - 4 * a * b * b * b + b * b * b * b - 4 * a * a * a * b;
+            double numDouble = Math.Pow(a - b, 4) - Math.Pow(a, 4);
+            double denDouble = 6 * Math.Pow(a, 2) * Math.Pow(b, 2) - 4 * a * Math.Pow(b, 3) + Math.Pow(b, 4) - 4 * Math.Pow(a, 3) * b;
             double resDouble = numDouble / denDouble;
 
             float aF = 1000.0f;
             float bF = 0.0001f;
-            float numFloat = (aF - bF) * (aF - bF) * (aF - bF) * (aF - bF) - (aF * aF * aF * aF);
-            float denFloat = 6 * aF * aF * bF * bF - 4 * aF * bF * bF * bF + bF * bF * bF * bF - 4 * aF * aF * aF * bF;
+            float numFloat = (float)Math.Pow(aF - bF, 4) - (float)Math.Pow(aF, 4);
+            float denFloat = 6 * (float)Math.Pow(aF, 2) * (float)Math.Pow(bF, 2) - 4 * aF * (float)Math.Pow(bF, 3) + (float)Math.Pow(bF, 4) - 4 * (float)Math.Pow(aF, 3) * bF;
             float resFloat = numFloat / denFloat;
 
             Console.WriteLine("Результат с типом данных (double): " + resDouble);
