@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LaboratoryWork3
+namespace LaboratoryWork2
 {
     class Program
     {
