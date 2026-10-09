@@ -17,17 +17,15 @@ namespace LaboratoryWork3
             Console.WriteLine("Вычисление функции");
             Console.WriteLine("---------------------------------------------------------------------");
 
-            // Внешний цикл: изменение параметра х от pi/5 до pi
             for (double x = startX; x <= endX + step / 2; x += step)
             {
-                // Округляем х для аккуратного шага
                 x = Math.Round(x, 4);
 
                 double sumN = CalculateSumForAssignedN(x, assignedN);
                 double sumE = CalculateSumWithPrecision(x, precisionE);
                 double exactY = CalculateExactValue(x);
 
-                // Вывод результатов по шаблону из методички
+
                 Console.WriteLine("X=" + x.ToString("F4") + "\tSN=" + sumN.ToString("F6") + "\tSE=" + sumE.ToString("F6") + "\tY=" + exactY.ToString("F6"));
             }
 
